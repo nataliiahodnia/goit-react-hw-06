@@ -1,22 +1,64 @@
 .inputSearch {
-  height: 30px;
-  border-radius: 12px;
-  border: 2px solid #e97ecb;
-  width: 210px;
-  padding: 8px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #ff8bff;
+  width: 350px;
+  padding: 10px;
   font-size: 16px;
-  transition: border-color 0.3s, box-shadow 0.3s;
-  background-color: white;
+  transition: border-color 0.3s, box-shadow 0.3s, width 0.3s; /* Додано transition для зміни ширини */
+  background-color: #75487a; /* Фоновий колір */
+  position: relative;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .inputSearch:focus {
   outline: none;
-  border-color: #511c42;
-  box-shadow: 0 0 4px rgba(217, 126, 212, 0.5);
+  border-color: #ff8bff; /* Змінено колір рамки при фокусуванні */
+  box-shadow: 0 0 8px rgba(255, 139, 255, 0.5);
+  width: 270px; /* Збільшено ширину при фокусуванні */
+}
+
+.inputSearch::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff8bff; /* Змінено колір світіння */
+  opacity: 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0.5;
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    opacity: 0.2;
+  }
+  100% {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
 }
 
 .label {
+  font-size: 24px;
   margin-top: 30px;
-  font-weight: 700;
-  color: #e97ecb;
+  color: #ff8bff;
+  transition: color 0.3s, transform 0.3s; /* Додано transition для зміни кольору та переміщення */
+}
+
+.label:hover {
+  color: #d064d6; /* Змінено колір тексту при наведенні */
+  transform: translateY(-5px); /* Змінено позицію тексту при наведенні */
 }

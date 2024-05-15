@@ -1,10 +1,18 @@
 .listItem {
   display: flex;
-  padding: 8px 12px;
-  border-radius: 5px;
+  padding: 20px;
+  border-radius: 20px;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  background-color: #f7e6ff; /* М'який фон */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.listItem:hover {
+  background-color: #e6b3ff; /* Змінений колір фону при наведенні */
+  color: #fff; /* Колір тексту при наведенні */
 }
 
 .contactInfo {
@@ -18,19 +26,51 @@
 
 .deleteBtn {
   margin-top: 20px;
-  padding: 8px 16px;
-  background-color: #e97ecb;
-  color: #fff;
+  padding: 10px 20px;
+  background-color: #ff6ac1; /* Рожевий колір кнопки */
+  color: #fff; /* Колір тексту кнопки */
   border: none;
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-  height: 50px;
   font-weight: 600;
+  position: relative;
+  overflow: hidden; /* Зробив обрізку для ефекту */
+}
+
+.deleteBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2); /* Прозора кругла область */
+  border-radius: 50%;
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.deleteBtn:hover::before {
+  width: 0;
+  height: 0;
+  opacity: 0; /* Зробив область зникнення */
+}
+
+@keyframes dance {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .deleteBtn:hover {
-  background-color: #511c42;
+  background-color: #ff2e89; /* Змінив колір кнопки при наведенні */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: dance 0.5s ease infinite; /* Додав анімацію танцювання */
 }
+
+
+

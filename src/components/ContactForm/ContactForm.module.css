@@ -1,10 +1,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  border: 2px solid #e97ecb;
-  border-radius: 12px;
-  padding: 72px;
+  gap: 20px;
+  border: 2px solid #f68ff6;
+  border-radius: 50px; /* Змінено радіус на більш великий */
+  padding: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.5s;
+background-color: #955b95;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .inputContainer {
@@ -12,36 +20,107 @@
   flex-direction: column;
 }
 
-.btnAdd {
-  margin-top: 20px;
-  padding: 8px 16px;
-  background-color: #e97ecb;
-  color: #fff;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s, box-shadow 0.3s;
-  height: 50px;
+.inputContainer label {
+  color: #ff8bff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s; /* Анімація зміни кольору міток */
 }
 
-.btnAdd:hover {
-  background-color: #511c42;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.inputContainer:hover label {
+  color: #511c42; /* Зміна кольору міток при наведенні на контейнер */
 }
 
 .inputValue {
-  background-color: #ffffff;
-  color: #242424;
-  border: 2px solid #e97ecb;
-  border-radius: 12px;
-  padding: 6px 10px;
-  width: 210px;
-  margin-top: 8px;
-  height: 40px;
+  background-color: #ffd8ff;
+  color: #36013f;
+  border: 2px solid #ff8bff;
+  border-radius: 30px; /* Змінено радіус на більш великий */
+  padding: 15px;
+  width: 300px;
+  font-size: 18px;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputValue:focus {
+  outline: none;
+  background-color: #ffd8ff;
+  border-color: #ff8bff;
+  box-shadow: 0 0 8px rgba(255, 139, 255, 0.5);
 }
 
 .error {
-  color: red;
+  color: #8d0c44;
   font-size: 16px;
+  animation: pulse 0.5s ease infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.btnAdd {
+  margin-top: 20px;
+  padding: 15px 30px;
+  background-color: #994581;
+  color: #f0d4f3;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btnAdd:hover {
+  background-color: #ff8bff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) rotate(5deg);
+  animation: heartBeat 0.6s infinite;
+}
+
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  40% { transform: scale(0.9); }
+  55% { transform: scale(1.1); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+
+@keyframes jiggle {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(10deg); }
+}
+
+.inputValue:hover {
+  animation: shake 0.5s ease infinite;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.container:hover .inputValue {
+  animation: glow 1s ease infinite alternate; /* Анімація сяйва для полів вводу при наведенні на контейнер */
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #ff8bff; }
+  100% { box-shadow: 0 0 20px #ff8bff; }
+}
+
+.btnAdd:hover {
+  animation: heartbeat 1s ease infinite; /* Анімація вибитого серця для кнопки додавання при наведенні */
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 }

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #625f6e;
+  background-color: #5a264b;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -34,6 +34,9 @@ h1 {
   color: #e97ecb;
   font-size: 28px;
   line-height: 1.1;
+}
+p {
+  color: #824c73;
 }
 
 button {
