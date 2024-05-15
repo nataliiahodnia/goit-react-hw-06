@@ -33,7 +33,7 @@
 .inputValue {
   background-color: #ffffff;
   color: #242424;
-  border: 2px solid  #e97ecb;;
+  border: 2px solid #e97ecb;
   border-radius: 12px;
   padding: 6px 10px;
   width: 210px;
@@ -45,7 +45,3 @@
   color: red;
   font-size: 16px;
 }
-
-
-
-

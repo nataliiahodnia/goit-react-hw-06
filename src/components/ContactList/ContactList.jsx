@@ -1,8 +1,8 @@
 import Contact from "../Contact/Contact";
 
 import { useSelector } from "react-redux";
-import { getContacts } from '../../redux/contactsSlice'
-import {getSearchQuery } from "../../redux/filtersSlice";
+import { getContacts } from "../../redux/contactsSlice";
+import { getSearchQuery } from "../../redux/filtersSlice";
 
 import css from "./ContactList.module.css";
 
@@ -19,7 +19,7 @@ export default function ContactList() {
     <>
       <ul className={css.list}>
         {visibleContacts.map((contacts) => (
-        <Contact key={contacts.id} contacts={contacts} />
+          <Contact key={contacts.id} contacts={contacts} />
         ))}
       </ul>
     </>

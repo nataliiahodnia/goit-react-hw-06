@@ -14,7 +14,10 @@ const regex = {
 
 // Об'єкт Yup валідації полів форми
 const FeedbackSchema = Yup.object().shape({
-  name: Yup.string().min(3, "Too Short!").max(50, "Too Long!").required("Required"),
+  name: Yup.string()
+    .min(3, "Too Short!")
+    .max(50, "Too Long!")
+    .required("Required"),
   phone: Yup.string()
     .min(3, "Too Short!")
     .max(50, "Too Long!")
@@ -41,7 +44,11 @@ export default function ContactForm() {
 
   return (
     <>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FeedbackSchema}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={FeedbackSchema}
+      >
         <Form className={css.container}>
           <div className={css.inputContainer}>
             <label htmlFor={nameFieldId}>Name</label>
