@@ -31,12 +31,15 @@ body {
 }
 
 h1 {
-  color: #e97ecb;
-  font-size: 28px;
-  line-height: 1.1;
+  color: #ffffff;
+  font-size: 38px;
+  line-height: 1.5;
+  letter-spacing: 2pc;
+  font-weight: 400;
 }
 p {
-  color: #824c73;
+  color: #d15cb0;
+  font-weight: 400;
 }
 
 button {

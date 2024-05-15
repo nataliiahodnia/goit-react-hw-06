@@ -51,14 +51,38 @@
   }
 }
 
+
+.animatedText {
+  overflow: hidden;
+}
+
 .label {
   font-size: 24px;
   margin-top: 30px;
   color: #ff8bff;
-  transition: color 0.3s, transform 0.3s; /* Додано transition для зміни кольору та переміщення */
 }
 
-.label:hover {
-  color: #d064d6; /* Змінено колір тексту при наведенні */
-  transform: translateY(-5px); /* Змінено позицію тексту при наведенні */
+.label span {
+  display: inline-block;
+  animation: moveText 1s infinite alternate;
 }
+
+@keyframes moveText {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-5deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+

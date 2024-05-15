@@ -10,7 +10,31 @@ export default function SearchBox() {
 
   return (
     <div className={css.container}>
-      <p className={css.label}>Find contacts by name</p>
+      <div className={css.animatedText}>
+        <p className={css.label}>
+          <span>F</span>
+          <span>i</span>
+          <span>n</span>
+          <span>d</span>
+          <span>&nbsp;</span>
+          <span>c</span>
+          <span>o</span>
+          <span>n</span>
+          <span>t</span>
+          <span>a</span>
+          <span>c</span>
+          <span>t</span>
+          <span>s</span>
+          <span>&nbsp;</span>
+          <span>b</span>
+          <span>y</span>
+          <span>&nbsp;</span>
+          <span>n</span>
+          <span>a</span>
+          <span>m</span>
+          <span>e</span>
+        </p>
+      </div>
       <input
         className={css.inputSearch}
         type="text"

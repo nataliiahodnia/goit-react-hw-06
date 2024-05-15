@@ -6,7 +6,18 @@ import "./App.css";
 export default function App() {
   return (
     <div>
-      <h1>Phonebook</h1>
+<h1>
+  <span>P</span>
+  <span>h</span>
+  <span>o</span>
+  <span>n</span>
+  <span>e</span>
+  <span>b</span>
+  <span>o</span>
+  <span>o</span>
+  <span>k</span>
+</h1>
+
       <ContactForm />
       <SearchBox />
       <ContactList />

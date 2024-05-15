@@ -4,3 +4,26 @@
   padding: 2rem;
   text-align: center;
 }
+
+@keyframes move {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  50% {
+    transform: translateY(5px) scale(1.2);
+  }
+  75% {
+    transform: translateY(-5px) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+h1 span {
+  display: inline-block;
+  animation: move 1s infinite;
+}
