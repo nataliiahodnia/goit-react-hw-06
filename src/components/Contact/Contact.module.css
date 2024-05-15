@@ -1,14 +1,44 @@
 .listItem {
   display: flex;
+  justify-content: center;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 40px;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   background-color: #f7e6ff; /* М'який фон */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Додано позицію */
+  overflow: hidden; /* Додано обрізку */
+  width: 170px;
 }
+
+.listItem::before {
+  content: '';
+  position: absolute;
+  background-color: #ff8bff; /* Колір ефекту */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  animation: ripple 1.5s infinite; /* Анімація ефекту */
+}
+
+@keyframes ripple {
+  0% {
+    width: 150%;
+    height: 150%;
+    opacity: 0.3;
+  }
+  100% {
+    width: 500%;
+    height: 500%;
+    opacity: 0;
+  }
+}
+
 
 .listItem:hover {
   background-color: #e6b3ff; /* Змінений колір фону при наведенні */
@@ -72,5 +102,32 @@
   animation: dance 0.5s ease infinite; /* Додав анімацію танцювання */
 }
 
+/* Анімація для форми */
+.formContainer {
+  background-color: #955b95; /* Пурпурний фон */
+  border-radius: 20px; /* Зменшено радіус */
+  padding: 20px; /* Зменшено відступи */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.5s;
+  position: relative;
+}
+
+.formContainer::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.formContainer:hover {
+  background-color: #75487a; /* Змінений колір фону при наведенні */
+  transform: translateY(-3px); /* Зменшено висоту трансформації */
+}
 
 
