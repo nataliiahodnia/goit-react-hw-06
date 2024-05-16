@@ -7,12 +7,10 @@ import { addContact } from "../../redux/contactsSlice";
 
 import css from "./ContactForm.module.css";
 
-// Валідація полів форми
 const regex = {
-  phoneNumber: /^[0-9]{3}[-]{1}[0-9]{2}[-]{1}[0-9]{2}$/, // Регулярні вираз для поля форми Number
+  phoneNumber: /^[0-9]{3}[-]{1}[0-9]{2}[-]{1}[0-9]{2}$/, 
 };
 
-// Об'єкт Yup валідації полів форми
 const FeedbackSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, "Too Short!")
@@ -28,10 +26,9 @@ const FeedbackSchema = Yup.object().shape({
 export default function ContactForm() {
   const dispatch = useDispatch();
 
-  const nameFieldId = useId(); // Створення ідентифікаторів
-  const phoneFieldId = useId(); // поліив форми
+  const nameFieldId = useId();
+  const phoneFieldId = useId();
 
-  // Початкове значення полів форми
   const initialValues = {
     name: "",
     phone: "",
