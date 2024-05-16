@@ -51,7 +51,7 @@ export default function ContactForm() {
       >
         <Form className={css.container}>
           <div className={css.inputContainer}>
-            <label htmlFor={nameFieldId}>Name</label>
+            <label className={css.inputContainer}htmlFor={nameFieldId}>Name</label>
             <Field className={css.inputValue} type="text" name="name" />
             <ErrorMessage className={css.error} name="name" component="span" />
           </div>

@@ -2,6 +2,23 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  animation: flyIn 1s ease forwards;
 }
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+

@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #5a264b;
+  background-color: #1a1a1a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,14 +31,14 @@ body {
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 38px;
+  color: #ff2e89;
+  font-size: 42px;
   line-height: 1.5;
   letter-spacing: 2pc;
   font-weight: 400;
 }
 p {
-  color: #d15cb0;
+  color: #1a1a1a;
   font-weight: 400;
 }
 

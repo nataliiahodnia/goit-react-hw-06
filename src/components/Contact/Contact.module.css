@@ -7,17 +7,18 @@
   flex-wrap: wrap;
   flex-direction: column;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  background-color: #f7e6ff; /* М'який фон */
+  background-color: #ffffff; /* Білий фон */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative; /* Додано позицію */
   overflow: hidden; /* Додано обрізку */
   width: 170px;
+  color: #1a1a1a; /* Чорний колір тексту */
 }
 
 .listItem::before {
   content: '';
   position: absolute;
-  background-color: #ff8bff; /* Колір ефекту */
+  background-color: #1a1a1a; /* Чорний колір ефекту */
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -39,72 +40,32 @@
   }
 }
 
-
 .listItem:hover {
-  background-color: #e6b3ff; /* Змінений колір фону при наведенні */
-  color: #fff; /* Колір тексту при наведенні */
+  background-color: #c03672; /* Змінений колір фону при наведенні */
+  animation: flyIn 0.5s ease infinite alternate; /* Додано анімацію літаючих ефектів */
 }
 
-.contactInfo {
-  display: flex;
-  flex-direction: column;
+@keyframes flyIn {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
-.contactItem {
-  margin: 0;
-}
 
-.deleteBtn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #ff6ac1; /* Рожевий колір кнопки */
-  color: #fff; /* Колір тексту кнопки */
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: 600;
-  position: relative;
-  overflow: hidden; /* Зробив обрізку для ефекту */
-}
-
-.deleteBtn::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(255, 255, 255, 0.2); /* Прозора кругла область */
-  border-radius: 50%;
-  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.deleteBtn:hover::before {
-  width: 0;
-  height: 0;
-  opacity: 0; /* Зробив область зникнення */
-}
-
-@keyframes dance {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(-5deg); }
-  40% { transform: rotate(5deg); }
-  60% { transform: rotate(-5deg); }
-  80% { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); }
-}
-
-.deleteBtn:hover {
-  background-color: #ff2e89; /* Змінив колір кнопки при наведенні */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: dance 0.5s ease infinite; /* Додав анімацію танцювання */
-}
-
-/* Анімація для форми */
 .formContainer {
-  background-color: #955b95; /* Пурпурний фон */
+  background-color: #1a1a1a000; /* Чорний фон */
   border-radius: 20px; /* Зменшено радіус */
   padding: 20px; /* Зменшено відступи */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -126,8 +87,55 @@
 }
 
 .formContainer:hover {
-  background-color: #75487a; /* Змінений колір фону при наведенні */
+  background-color: #ff2e89; /* Змінений колір фону при наведенні */
   transform: translateY(-3px); /* Зменшено висоту трансформації */
 }
 
+.deleteBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.deleteBtn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: width 0.5s ease-out, height 0.5s ease-out, opacity 0.5s ease-out;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.deleteBtn:hover::before {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* @keyframes dance {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  20% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+} */
+
+.deleteBtn:hover {
+  background-color: #ff2e89;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: dance 0.5s ease infinite;
+}
 
