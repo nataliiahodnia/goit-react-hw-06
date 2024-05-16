@@ -30,6 +30,14 @@ body {
   min-height: 100vh;
 }
 
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
 h1 {
   color: #ff2e89;
   font-size: 42px;
@@ -41,4 +49,6 @@ p {
   color: #1a1a1a;
   font-weight: 400;
 }
+
+
 
