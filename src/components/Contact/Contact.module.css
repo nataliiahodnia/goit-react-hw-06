@@ -7,24 +7,24 @@
   flex-wrap: wrap;
   flex-direction: column;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  background-color: #ffffff; /* Білий фон */
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative; /* Додано позицію */
-  overflow: hidden; /* Додано обрізку */
+  position: relative; 
+  overflow: hidden; 
   width: 170px;
-  color: #1a1a1a; /* Чорний колір тексту */
+  color: #1a1a1a; 
 }
 
 .listItem::before {
-  content: '';
+  content: "";
   position: absolute;
-  background-color: #1a1a1a; /* Чорний колір ефекту */
+  background-color: #1a1a1a; 
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  animation: ripple 1.5s infinite; /* Анімація ефекту */
+  animation: ripple 1.5s infinite;
 }
 
 @keyframes ripple {
@@ -41,8 +41,8 @@
 }
 
 .listItem:hover {
-  background-color: #c03672; /* Змінений колір фону при наведенні */
-  animation: flyIn 0.5s ease infinite alternate; /* Додано анімацію літаючих ефектів */
+  background-color: #c03672; 
+  animation: flyIn 0.5s ease infinite alternate;
 }
 
 @keyframes flyIn {
@@ -63,18 +63,17 @@
   }
 }
 
-
 .formContainer {
-  background-color: #1a1a1a000; /* Чорний фон */
-  border-radius: 20px; /* Зменшено радіус */
-  padding: 20px; /* Зменшено відступи */
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, transform 0.5s;
   position: relative;
 }
 
 .formContainer::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -87,14 +86,14 @@
 }
 
 .formContainer:hover {
-  background-color: #ff2e89; /* Змінений колір фону при наведенні */
-  transform: translateY(-3px); /* Зменшено висоту трансформації */
+  background-color: #ff2e89; 
+  transform: translateY(-3px); 
 }
 
 .deleteBtn {
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #000;
+  background-color: #1a1a1a;
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -105,7 +104,7 @@
 }
 
 .deleteBtn::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -124,18 +123,8 @@
   opacity: 0;
 }
 
-/* @keyframes dance {
-  0% { transform: rotate(0deg); }
-  20% { transform: rotate(-5deg); }
-  40% { transform: rotate(5deg); }
-  20% { transform: rotate(-5deg); }
-  80% { transform: rotate(5deg); }
-  100% { transform: rotate(0deg); }
-} */
-
 .deleteBtn:hover {
   background-color: #ff2e89;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   animation: dance 0.5s ease infinite;
 }
-

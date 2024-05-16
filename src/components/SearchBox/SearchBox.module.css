@@ -14,7 +14,7 @@
   margin-bottom: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: #1a1a1a;
-  animation: moveInput 5s infinite alternate, rotateInput 5s infinite alternate; /* Додана анімація для руху та обертання */
+  animation: moveInput 5s infinite alternate, rotateInput 5s infinite alternate; 
 }
 
 .inputSearch:focus {
@@ -57,24 +57,24 @@
 }
 
 @keyframes moveInput {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(100px); 
+    transform: translateX(100px);
   }
 }
 
 @keyframes rotateInput {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
   50% {
-    transform: rotate(5deg); 
+    transform: rotate(5deg);
   }
 }
-
-
 
 .animatedText {
   overflow: hidden;
